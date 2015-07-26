@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <input type="text" id="myInput">
+  <input type="button" id="myButton" value="Show Name">
+
+  <script type="text/javascript">
+     var myButton = document.getElementById('myButton');
+
+      function outputText(){
+            var myInputText = document.getElementById('myInput').value;
+            alert(myInputText);
+      }
+
+      myButton.addEventListener('click', outputText);
+  </script>
+</body>
+</html>
