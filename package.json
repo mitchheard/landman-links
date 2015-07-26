@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "connect": "^3.4.0",
+    "ejs": "^2.3.3",
     "express": "^4.13.1",
     "gulp": "latest"
   },
