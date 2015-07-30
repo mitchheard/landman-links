@@ -18,6 +18,8 @@ module.exports = function() {
   // routing file uses app instance to create new routing configuration
   // will then call the controller's render() method
   require('../app/routes/index.server.routes.js')(app);
+  // users route definition
+  require('../app/routes/users.server.routes.js')(app);
 
   // middleware
   app.use(express.static('./public'));
