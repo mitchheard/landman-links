@@ -2,6 +2,7 @@
   "name": "landman-links",
   "version": "1.0.0",
   "dependencies": {
+    "body-parser": "^1.13.2",
     "connect": "^3.4.0",
     "ejs": "^2.3.3",
     "express": "^4.13.1",

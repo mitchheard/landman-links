@@ -2,13 +2,21 @@
 // this is where we configure our Express app
 // everything relsated to the Express configuration is added here
 
-// call the express module (node_modules/express)
-var express = require('express');
+var config = require('./config'),
+    express = require('express'),
+    bodyParser = require('body-parser');
+
 // CommonJS module pattern
 // defines a module function that initializes the Express app
 module.exports = function() {
   // create new instance of an Express app
   var app = express();
+
+  // bodyParser provides several middlewares to handle request data
+  app.use(bodyParser.urlencoded({
+    extended: true
+  }));
+  app.use(bodyParser.json());
 
   app.set('views', './app/views');
   app.set('view engine', 'ejs');
