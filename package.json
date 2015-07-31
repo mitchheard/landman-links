@@ -4,10 +4,14 @@
   "dependencies": {
     "body-parser": "^1.13.2",
     "connect": "^3.4.0",
+    "connect-flash": "^0.1.1",
     "ejs": "^2.3.3",
     "express": "^4.13.1",
+    "express-session": "^1.11.3",
     "gulp": "latest",
-    "mongoose": "^4.1.0"
+    "mongoose": "^4.1.0",
+    "passport": "^0.2.2",
+    "passport-local": "^1.0.0"
   },
   "description": "Location Directory for Landmen",
   "main": "index.js",

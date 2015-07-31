@@ -7,5 +7,14 @@
 <body>
     <h1><%= title %></h1>
     <img src="img/rigs.jpg" alt="Oil sunset yes">
+
+    <% if ( user ) { %>
+        <h2>Hello <%=user%> </h2>
+        <a href="/logout">Logout</a>
+    <% } else { %>
+        <a href="/register">Register</a>
+        <a href="/login">Login</a>
+    <% } %>
+    
 </body>
 </html>

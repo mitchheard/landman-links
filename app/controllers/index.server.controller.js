@@ -7,6 +7,7 @@
 exports.render = function(req, res) {
   // render index template an output as an HTML response
   res.render('index', {
-    title: 'Howdy World'
-  })
+      title: 'MEAN MVC',
+      user: req.user ? req.user.username : ''
+  });
 };

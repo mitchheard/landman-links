@@ -1,10 +1,13 @@
-// contains initialization code of our Express appl
+// contains initialization code of our Express app
 // this is where we configure our Express app
 // everything relsated to the Express configuration is added here
 
 var config = require('./config'),
     express = require('express'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    passport = require('passport'),
+    flash = require('connect-flash'),
+    session = require('express-session');
 
 // CommonJS module pattern
 // defines a module function that initializes the Express app
@@ -17,6 +20,19 @@ module.exports = function() {
     extended: true
   }));
   app.use(bodyParser.json());
+
+  // temporary messages in a session object
+  app.use(flash());
+
+  app.use(session({
+    saveUninitialized: true,
+    resave: true,
+    secret: 'OurSuperSecretCookieSecret'
+  }));
+
+  // use this code before and route definitions
+  app.use(passport.initialize());
+  app.use(passport.session());
 
   app.set('views', './app/views');
   app.set('view engine', 'ejs');
